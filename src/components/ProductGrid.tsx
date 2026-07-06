@@ -2,7 +2,16 @@ import { useState } from "react";
 import type { Category, Product } from "../types";
 import ProductCard from "./ProductCard";
 
-const CATEGORIES: (Category | "All")[] = ["All", "Wristwatches", "Necklaces", "Earrings", "Eyeglasses"];
+const CATEGORIES: (Category | "All")[] = [
+  "All",
+  "Wristwatches",
+  "Necklaces",
+  "Earrings",
+  "Eyeglasses",
+  "Leg Chains",
+  "Waist Chains",
+  "Waist Beads",
+];
 
 interface ProductGridProps {
   products: Product[];

@@ -128,4 +128,66 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1646084081219-1090f72a531c?w=700&h=700&fit=crop",
     isNew: true,
   },
+
+  {
+    id: "l-001",
+    name: "Delicate Gold Leg Chain",
+    category: "Leg Chains",
+    caption: "Thin gold-tone chain, worn low on the ankle for a subtle shine.",
+    image: "https://images.unsplash.com/photo-1588658163621-f853df4bbe86?w=700&h=700&fit=crop",
+    isNew: true,
+  },
+  {
+    id: "l-002",
+    name: "Charm Leg Chain",
+    category: "Leg Chains",
+    caption: "Fine chain with a small charm detail, dressy or casual.",
+    image: "https://images.unsplash.com/photo-1744722091259-ed1cf11ac97f?w=700&h=700&fit=crop",
+  },
+  {
+    id: "l-003",
+    name: "Layered Ankle Chain",
+    category: "Leg Chains",
+    caption: "Double-layer chain for extra detail without being heavy.",
+    image: "https://images.unsplash.com/photo-1651395835317-d2868e8ebcac?w=700&h=700&fit=crop",
+  },
+
+  {
+    id: "wc-001",
+    name: "Classic Waist Chain",
+    category: "Waist Chains",
+    caption: "Simple gold-tone chain, adjustable fit, worn under or over clothing.",
+    image: "https://images.unsplash.com/photo-1616837874254-8d5aaa63e273?w=700&h=700&fit=crop",
+    isNew: true,
+  },
+  {
+    id: "wc-002",
+    name: "Double Layer Waist Chain",
+    category: "Waist Chains",
+    caption: "Two-strand chain for a fuller, statement waist look.",
+    image: "https://images.unsplash.com/photo-1600721391776-b5cd0e0048f9?w=700&h=700&fit=crop",
+  },
+
+  {
+    id: "wb-001",
+    name: "Multicolor Waist Beads",
+    category: "Waist Beads",
+    caption: "Hand-strung beads in mixed colors, adjustable tie fastening.",
+    image: "https://images.unsplash.com/photo-1629481995102-ff98d306dd8a?w=700&h=700&fit=crop",
+    isNew: true,
+  },
+  {
+    id: "wb-002",
+    name: "Gold Accent Waist Beads",
+    category: "Waist Beads",
+    caption: "Beaded strand with gold-tone accents, elastic and adjustable.",
+    image: "https://images.unsplash.com/photo-1719862056552-b9de4f843beb?w=700&h=700&fit=crop",
+  },
+  {
+    id: "wb-003",
+    name: "Classic Single Strand Beads",
+    category: "Waist Beads",
+    caption: "Simple single-strand beads, a versatile everyday piece.",
+    image: "https://images.unsplash.com/photo-1560847133-e6f64dc352ea?w=700&h=700&fit=crop",
+  },
 ];

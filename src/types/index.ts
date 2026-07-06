@@ -1,4 +1,11 @@
-export type Category = "Wristwatches" | "Necklaces" | "Earrings" | "Eyeglasses";
+export type Category =
+  | "Wristwatches"
+  | "Necklaces"
+  | "Earrings"
+  | "Eyeglasses"
+  | "Leg Chains"
+  | "Waist Chains"
+  | "Waist Beads";
 
 export interface Product {
   id: string;
