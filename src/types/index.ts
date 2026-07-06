@@ -1,16 +1,10 @@
-export type Category = "Rings" | "Necklaces" | "Earrings" | "Bracelets";
+export type Category = "Wristwatches" | "Necklaces" | "Earrings" | "Eyeglasses";
 
 export interface Product {
   id: string;
   name: string;
   category: Category;
-  price: number; // in Naira
-  description: string;
+  caption: string;
   image: string;
   isNew?: boolean;
-}
-
-export interface CartItem {
-  product: Product;
-  quantity: number;
 }

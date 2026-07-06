@@ -1,13 +1,12 @@
 import type { Product } from "../types";
-import { formatNaira } from "../utils/whatsapp";
+import { buildEnquiryLink } from "../utils/whatsapp";
 
 interface ProductModalProps {
   product: Product | null;
   onClose: () => void;
-  onAddToCart: (product: Product) => void;
 }
 
-export default function ProductModal({ product, onClose, onAddToCart }: ProductModalProps) {
+export default function ProductModal({ product, onClose }: ProductModalProps) {
   if (!product) return null;
 
   return (
@@ -34,19 +33,16 @@ export default function ProductModal({ product, onClose, onAddToCart }: ProductM
 
           <p className="text-[11px] tracking-wide-lg uppercase text-stone">{product.category}</p>
           <h2 className="font-display text-3xl mt-2">{product.name}</h2>
-          <p className="font-display text-2xl text-champagne mt-3">{formatNaira(product.price)}</p>
+          <p className="text-onyx/70 mt-4 leading-relaxed">{product.caption}</p>
 
-          <p className="text-onyx/70 mt-6 leading-relaxed">{product.description}</p>
-
-          <button
-            onClick={() => {
-              onAddToCart(product);
-              onClose();
-            }}
-            className="mt-auto pt-8 w-full bg-onyx text-ivory rounded-full py-3.5 text-sm tracking-wide-lg uppercase hover:bg-onyx/85 transition-colors"
+          <a
+            href={buildEnquiryLink(product)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto pt-8 w-full text-center bg-onyx text-ivory rounded-full py-3.5 text-sm tracking-wide-lg uppercase hover:bg-onyx/85 transition-colors"
           >
-            Add to bag
-          </button>
+            Enquire on WhatsApp
+          </a>
         </div>
       </div>
     </div>

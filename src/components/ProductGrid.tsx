@@ -2,15 +2,14 @@ import { useState } from "react";
 import type { Category, Product } from "../types";
 import ProductCard from "./ProductCard";
 
-const CATEGORIES: (Category | "All")[] = ["All", "Rings", "Necklaces", "Earrings", "Bracelets"];
+const CATEGORIES: (Category | "All")[] = ["All", "Wristwatches", "Necklaces", "Earrings", "Eyeglasses"];
 
 interface ProductGridProps {
   products: Product[];
   onSelect: (product: Product) => void;
-  onQuickAdd: (product: Product) => void;
 }
 
-export default function ProductGrid({ products, onSelect, onQuickAdd }: ProductGridProps) {
+export default function ProductGrid({ products, onSelect }: ProductGridProps) {
   const [active, setActive] = useState<Category | "All">("All");
 
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
@@ -42,7 +41,7 @@ export default function ProductGrid({ products, onSelect, onQuickAdd }: ProductG
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
         {filtered.map((product) => (
-          <ProductCard key={product.id} product={product} onSelect={onSelect} onQuickAdd={onQuickAdd} />
+          <ProductCard key={product.id} product={product} onSelect={onSelect} />
         ))}
       </div>
 

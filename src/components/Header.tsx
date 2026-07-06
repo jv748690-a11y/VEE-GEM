@@ -1,9 +1,6 @@
-interface HeaderProps {
-  cartCount: number;
-  onCartClick: () => void;
-}
+import { buildGeneralEnquiryLink } from "../utils/whatsapp";
 
-export default function Header({ cartCount, onCartClick }: HeaderProps) {
+export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-ivory/90 backdrop-blur-sm border-b border-stone/20">
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between h-20">
@@ -17,23 +14,14 @@ export default function Header({ cartCount, onCartClick }: HeaderProps) {
           <a href="#contact" className="hover:text-champagne transition-colors">Contact</a>
         </nav>
 
-        <button
-          onClick={onCartClick}
-          aria-label="Open cart"
-          className="relative flex items-center gap-2 border border-onyx/20 rounded-full px-4 py-2 hover:border-champagne transition-colors"
+        <a
+          href={buildGeneralEnquiryLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-onyx text-ivory rounded-full px-5 py-2.5 text-sm hover:bg-onyx/85 transition-colors"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-          </svg>
-          <span className="text-sm">Bag</span>
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-champagne text-onyx text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
-              {cartCount}
-            </span>
-          )}
-        </button>
+          Enquire
+        </a>
       </div>
     </header>
   );
